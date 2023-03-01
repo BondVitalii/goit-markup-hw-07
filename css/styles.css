@@ -1,3 +1,9 @@
+/** Breakpoints:
+  phones - 428px
+  tablet - 768px
+  desktop - 1158px
+*/
+
 :root {
   /* txt-color (cl)*/
   --basic-white-txt-cl: #ffffff;
