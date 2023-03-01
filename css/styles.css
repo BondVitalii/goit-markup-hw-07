@@ -84,6 +84,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 
+  /* изночальные для desktop */
   /* width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -93,14 +94,12 @@ body {
   /*для визуального эфекта во время работы*/
   outline: 1px solid red;
 }
-
 @media screen and (min-width: 768px) {
   .container {
     /* Tablet screen: >= 768px */
     max-width: 736px;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .container {
     /* Desktop screen: >= 1158px */
