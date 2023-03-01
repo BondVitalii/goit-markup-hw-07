@@ -76,15 +76,40 @@ body {
   color: var(--slate-txt-cl);
 }
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* Phone screen: >= 320px */
+  min-width: 320px;
+  max-width: 396px;
+  /* padding-left: 16px;
+  padding-right: 16px; */
   margin-left: auto;
   margin-right: auto;
 
+  /* width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; */
+
   /*для визуального эфекта во время работы*/
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
+
+@media screen and (min-width: 768px) {
+  .container {
+    /* Tablet screen: >= 768px */
+    max-width: 736px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    /* Desktop screen: >= 1158px */
+    max-width: 1158px;
+  }
+}
+
+
+
 img {
   display: block;
   max-width: 100%;
