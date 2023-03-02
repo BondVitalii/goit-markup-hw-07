@@ -76,13 +76,12 @@ body {
   color: var(--slate-txt-cl);
 }
 
-
 .container {
   /* Phone screen: >= 320px */
   min-width: 320px;
   max-width: 396px;
-  /* padding-left: 16px;
-  padding-right: 16px; */
+  padding-left: 16px;
+  padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
 
@@ -212,16 +211,25 @@ img {
   background-color: var(--pressed-txt-cl);
 }
 
-/*########## Individual Styles ##########*/
+/*#################### Individual Styles ####################*/
 
 /*======= HEADER =======*/
 .section-header {
   border-bottom: 1px solid var(--accent-txt-cl);
 }
+@media screen and (max-width: 768px) {
+  .section-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
 .header-nav {
+  /* display: none; */
   display: flex;
   align-items: center;
 }
+
 /*-----logo-----*/
 .logo-site {
   margin-right: 76px;
@@ -240,11 +248,18 @@ img {
 .logo-color-second {
   color: var(--cloud-light-bg-cl);
 }
-/*-----navigation-----*/
+
+/*-----Navigation-----*/
 .nav-list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
   display: flex;
   align-items: center;
 }
+}
+
 .nav-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -258,12 +273,6 @@ img {
   font-style: normal;
   font-weight: 500;
   color: var(--navyblue-dark-txt-cl);
-
-  /* font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em; */
-
-  /* transition: color var(--transit); */
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -274,12 +283,18 @@ img {
   transition: color var(--transit);
 }
 
-/*-----contact-----*/
+/*-----Contact-----*/
 .contact-list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact-list {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
+}
+
 .contact-item + .contact-item {
   margin-left: 40px;
 }
@@ -295,6 +310,28 @@ img {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--pressed-txt-cl);
+}
+
+/* -----Кнопка меню телефон----- */
+.header-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-left: auto;
+
+  stroke: var(--navyblue-dark-bg-cl);
+}
+@media screen and (min-width: 768px) {
+  .header-menu-btn {
+    display: none;
+  }
 }
 
 /*======= HERO =======*/

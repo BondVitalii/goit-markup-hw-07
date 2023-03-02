@@ -31,7 +31,7 @@
         }
       ],
       "properties": {
-        "order": 31,
+        "order": 3,
         "id": 1,
         "name": "vector_menu-hamburger",
         "prevSize": 32
@@ -70,9 +70,9 @@
         }
       ],
       "properties": {
-        "order": 32,
+        "order": 2,
         "id": 0,
-        "name": "charm_menu-hamburger",
+        "name": "menu-hamburger",
         "prevSize": 32
       },
       "setIdx": 0,
@@ -84,7 +84,7 @@
   "preferences": {
     "showGlyphs": true,
     "showQuickUse": true,
-    "showQuickUse2": false,
+    "showQuickUse2": true,
     "showSVGs": true,
     "fontPref": {
       "prefix": "icon-",
