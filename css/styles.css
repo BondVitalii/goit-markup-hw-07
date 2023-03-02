@@ -75,6 +75,8 @@ body {
   letter-spacing: 0.02em;
   color: var(--slate-txt-cl);
 }
+
+
 .container {
   /* Phone screen: >= 320px */
   min-width: 320px;
@@ -83,13 +85,6 @@ body {
   padding-right: 16px; */
   margin-left: auto;
   margin-right: auto;
-
-  /* изночальные для desktop */
-  /* width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto; */
 
   /*для визуального эфекта во время работы*/
   outline: 1px solid red;
@@ -104,6 +99,8 @@ body {
   .container {
     /* Desktop screen: >= 1158px */
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
