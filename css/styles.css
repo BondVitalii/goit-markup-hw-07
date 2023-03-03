@@ -80,12 +80,11 @@ body {
   /* Phone screen: >= 320px */
   min-width: 320px;
   max-width: 428px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
 
-  /*для визуального эфекта во время работы*/
+  /*для визуал. эфекта во время работы*/
   outline: 1px solid red;
 }
 @media screen and (min-width: 768px) {
@@ -161,7 +160,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 /*-----social-icons-----*/
 .social-media-list {
   display: flex;
@@ -185,7 +183,6 @@ img {
 
   transition: background-color var(--transit);
 }
-
 .card-set {
   display: flex;
   flex-wrap: wrap;
@@ -194,7 +191,6 @@ img {
 .card-item {
   flex-basis: calc((100%- var(--ident) * (var(--items)-1)) / var(--items));
 }
-
 .nav-link.current::after {
   content: '';
   position: absolute;
@@ -209,25 +205,16 @@ img {
   background-color: var(--pressed-txt-cl);
 }
 
-/*#################### Individual Styles ####################*/
+/*\\\\\\\\\\\\\\\\\\\\ Individual Styles \\\\\\\\\\\\\\\\\\\\*/
 
-/*======= HEADER =======*/
+/*########## HEADER ##########*/
 .section-header {
   border-bottom: 1px solid var(--accent-txt-cl);
 }
-@media screen and (max-width: 768px) {
-  .section-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
 .header-nav {
-  /* display: none; */
   display: flex;
   align-items: center;
 }
-
 /*-----logo-----*/
 .logo-site {
   margin-right: 76px;
@@ -235,7 +222,7 @@ img {
   font-family: var(--secondary-font);
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.1666;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-logo-cl);
@@ -246,18 +233,10 @@ img {
 .logo-color-second {
   color: var(--cloud-light-bg-cl);
 }
-
 /*-----Navigation-----*/
 .nav-list {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  .nav-list {
-    display: flex;
-    align-items: center;
-  }
-}
-
 .nav-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -266,7 +245,7 @@ img {
 
   display: block;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 22px;
 
   font-style: normal;
   font-weight: 500;
@@ -280,52 +259,25 @@ img {
 .contact-list a {
   transition: color var(--transit);
 }
-
 /*-----Contact-----*/
 .contact-list {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  .contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    justify-content: flex-start;
-
-    margin-left: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contact-list {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-direction: row;
-
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.contact-item + .contact-item {
-  /* margin-left: 40px; */
-}
 .contact-link {
   display: block;
-  /* padding-top: 24px;
-  padding-bottom: 24px; */
-
   font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
+  letter-spacing: 0.02em;
+
   color: var(--slate-txt-cl);
 }
-
 .contact-link:hover,
 .contact-link:focus {
   color: var(--pressed-txt-cl);
 }
-
-/* -----Кнопка меню телефон----- */
+/* -----Mobile menu----- */
 .header-menu-btn {
   display: flex;
   align-items: center;
@@ -341,13 +293,127 @@ img {
 
   stroke: var(--navyblue-dark-bg-cl);
 }
-@media screen and (min-width: 768px) {
-  .header-menu-btn {
+
+/* ########## Mobile menu ########## */
+/* .menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
     display: none;
   }
 }
 
-/*======= HERO =======*/
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 35px 40px 40px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+/* .menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+} */
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* =============== Медиа запросы Header =============== */
+
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+  .section-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: flex-start;
+
+    margin-left: auto;
+  }
+  .header-menu-btn {
+    display: none;
+  }
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+  .logo-site {
+    margin-right: 120px;
+  }
+  .contact-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1666;
+    letter-spacing: 0.04em;
+  }
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+/*########## HERO ##########*/
 .hero {
   background-color: var(--navyblue-dark-bg-cl);
 }
@@ -400,7 +466,7 @@ img {
   background-color: var(--pressed-bg-cl);
 }
 
-/*======= ADVANTAGE =======*/
+/*########## ADVANTAGE ##########*/
 .section-advantage {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -433,7 +499,7 @@ img {
   margin-bottom: 8px;
 }
 
-/*======= BENEFITS =======*/
+/*########## BENEFITS ##########*/
 .section-benefits {
   padding-bottom: 120px;
 }
@@ -445,7 +511,7 @@ img {
   margin-left: 24px;
 }
 
-/*======= TEAM =======*/
+/*########## TEAM ##########*/
 .team {
   background-color: var(--cloud-light-bg-cl);
 }
@@ -486,7 +552,7 @@ img {
   background-color: var(--pressed-bg-cl);
 }
 
-/*======= CUSTOMERS =======*/
+/*########## CUSTOMERS ##########*/
 .customers-section {
   padding-top: 130px;
   padding-bottom: 120px;
@@ -520,7 +586,7 @@ img {
   fill: var(--pressed-bg-cl);
 }
 
-/*======= FOOTER=======*/
+/*########## FOOTER ##########*/
 .section-footer {
   padding: 100px 0px;
 }
@@ -611,7 +677,7 @@ img {
   margin-left: 16px;
 }
 
-/*======= PORTFOLIO =======*/
+/*########## PORTFOLIO ##########*/
 .section-portfolio {
   padding: 96px 0 120px;
 }
@@ -698,7 +764,7 @@ img {
   row-gap: 48px;
 }
 
-/* MODAL-WINDOW */
+/* ########## MODAL-WINDOW ##########*/
 .backdrop {
   position: relative;
   position: fixed;
@@ -906,54 +972,52 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+/** Пробные вар-ты модального окна
+|============================
+   .modal-policy-checkbox:focus-within > policy-icon-box {
+    border-color: var(--pressed-bg-cl);
+  }
 
-/** Пробные
-  |============================
-  | .modal-policy-checkbox:focus-within > policy-icon-box {
-      border-color: var(--pressed-bg-cl);
+  .modal-policy-checkbox:focus + .policy-icon-box {
+    border-color: var(--pressed-bg-cl);
+  }
+
+  .modal-policy-checkbox:not(:focus) + .policy-icon-box {
+      border-color: var(--navyblue-dark-bg-cl);
     }
 
-    .modal-policy-checkbox:focus + .policy-icon-box {
-      border-color: var(--pressed-bg-cl);
-    }
-
-    .modal-policy-checkbox:not(:focus) + .policy-icon-box {
-        border-color: var(--navyblue-dark-bg-cl);
-      }
 
 
+  .policy-icon-box:focus {
+    border-color: var(--pressed-bg-cl);
+  }
 
-    .policy-icon-box:focus {
-      border-color: var(--pressed-bg-cl);
-    }
+  .modal-form-policy:focus + .policy-icon-box {
+    border-color: var(--pressed-bg-cl);
+  }
 
-    .modal-form-policy:focus + .policy-icon-box {
-      border-color: var(--pressed-bg-cl);
-    }
+  .policy-icon-box:focus-within > police-icon {
+    border: 1.25px solid var(--pressed-bg-cl);
+    border-color: var(--pressed-bg-cl);
+  }
 
-    .policy-icon-box:focus-within > police-icon {
-      border: 1.25px solid var(--pressed-bg-cl);
-      border-color: var(--pressed-bg-cl);
-    }
-  |============================
-*/
 
-/** вариант checkbox 1
-  |============================
 
- .policy-icon-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  вариант checkbox 1
+  --------------------------
+  .policy-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 
-    border: 1.25px solid var(--navyblue-dark-bg-cl);
-    border-radius: 2px;
+  border: 1.25px solid var(--navyblue-dark-bg-cl);
+  border-radius: 2px;
 
-    transition: border-color var(--transit), border var(--transit), background var(--transit);
+  transition: border-color var(--transit), border var(--transit), background var(--transit);
   }
 
 
@@ -980,11 +1044,9 @@ img {
   }
 
 
-  |============================
-*/
 
-/** Ярослав checkbox
-  |============================
+  Ярослав checkbox
+  -----------------------------------
   .modal-policy-checkbox {
     appearance: none;
     display: block;
@@ -1000,5 +1062,5 @@ img {
 
     transition: var(--transit);
   }
-  |============================
+|============================
 */

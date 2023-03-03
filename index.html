@@ -58,14 +58,17 @@
           </ul>
 
           <!-- кнопка меню телефон -->
-            <button class="header-menu-btn" type="button">
-              <svg class="header-menu-icon" width="32" height="22">
-                <use href="./images/icons.svg#icon-menu-hamburger"></use>
-              </svg>
-            </button>
+          <button
+            class="header-menu-btn js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header-menu-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+          </button>
         </nav>
-
-        
       </div>
     </header>
 
@@ -741,6 +744,47 @@
       </div>
     </div> -->
 
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-btn btn js-close-menu">
+        <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-Vector"></use>
+          </svg>
+      </button>
+
+      <ul class="mobile-menu mobile-list list">
+        <li class="mobile ">
+          <a class="link" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile ">
+          <a class="link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile ">
+          <a class="link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="">
+        <li class="">
+          <a class="" href=""></a>
+        </li>
+        <li class="">
+          <a class="" href=""></a>
+        </li>
+      </ul>
+
+      
+    </div>
+
+    <!-- Скрипты JS -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
