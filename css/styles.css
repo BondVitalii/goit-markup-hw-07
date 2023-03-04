@@ -25,6 +25,7 @@
   --border-cl: #8e8f99;
   --accent-bg-cl: #e7e9fc;
   --modal-bg-cl: #fcfcfc;
+  --one-bg-cl: rgba(46, 47, 66, 0.7);
   --backdrop-bg-cl: rgba(46, 47, 66, 0.4);
 
   /* logo-color */
@@ -189,7 +190,7 @@ img {
   gap: var(--ident);
 }
 .card-item {
-  flex-basis: calc((100%- var(--ident) * (var(--items)-1)) / var(--items));
+  flex-basis: calc((100% - var(--ident) * (var(--items) - 1)) / var(--items));
 }
 .nav-link.current::after {
   content: '';
@@ -312,11 +313,11 @@ img {
   background-color: var(--basic-white-bg-cl);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  
+
   z-index: 999;
 
   transform: translateX(100%);
-  
+
   transition: transform var(--transit);
 }
 .menu-container.is-open {
@@ -434,29 +435,30 @@ img {
   background-color: var(--navyblue-dark-bg-cl);
 }
 .section-hero {
-  padding-top: 188px;
-  padding-bottom: 188px;
-  max-width: 1440px;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  max-width: 428px;
   margin: 0 auto;
-
+  /* background-color: var(--one-bg-cl); */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/hero/people-office-1.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .hero-title {
-  width: 494px;
+  width: 320px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   color: var(--basic-white-txt-cl);
 }
@@ -481,11 +483,78 @@ img {
 .hero-btn:focus {
   background-color: var(--pressed-bg-cl);
 }
+/* ---Медиа запросы Hero--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+  .section-hero {
+    /* padding-top: 188px; */
+    padding-bottom: 108px;
+    max-width: 768px;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+
+    width: 494px;
+    margin-bottom: 40px;
+  }
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+  }
+  .hero-title {
+    margin-bottom: 48px;
+  }
+}
 
 /*########## ADVANTAGE ##########*/
+/** Репета с минусовыми маржинами
+    .section-advantage {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .advantage-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-bottom: 8px;
+
+    border-radius: 4px;
+    background-color: var(--cloud-light-bg-cl);
+  }
+  .icon-advantage {
+    height: 112px;
+  }
+  .advantage-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+  }
+  .advantage-item {
+    width: 264px;
+    margin: 12px;
+  }
+
+  .advantage-title {
+    margin-bottom: 8px;
+  } 
+*/
+
 .section-advantage {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .advantage-icon-box {
   display: flex;
@@ -493,26 +562,52 @@ img {
   justify-content: center;
 
   width: 100%;
-  /* height: 112px; */
+  height: 112px;
   margin-bottom: 8px;
 
   border-radius: 4px;
   background-color: var(--cloud-light-bg-cl);
 }
-.icon-advantage {
-  height: 112px;
-}
 .advantage-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -12px;
-}
-.advantage-item {
-  width: 264px;
-  margin: 12px;
+  /* display: flex; */
+  /* gap: 22px; */
+  --ident: 72px;
+  --items: 1;
 }
 .advantage-title {
   margin-bottom: 8px;
+}
+
+/* ---Медиа запросы Advantage--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+  .advantage-title.title-third {
+    text-align: center;
+  }
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+  .advantage-list {
+    --ident: 24px;
+    --items: 2;
+    row-gap: 72px;
+  }
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+  .advantage-icon-box {
+    display: none;
+  }
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .section-advantage {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .advantage-list {
+    --items: 4;
+  }
 }
 
 /*########## BENEFITS ##########*/
