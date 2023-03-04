@@ -277,7 +277,7 @@ img {
 .contact-link:focus {
   color: var(--pressed-txt-cl);
 }
-/* -----Mobile menu----- */
+/* -----Mobile menu кнопка----- */
 .header-menu-btn {
   display: flex;
   align-items: center;
@@ -293,76 +293,90 @@ img {
 
   stroke: var(--navyblue-dark-bg-cl);
 }
-
-/* ########## Mobile menu ########## */
-/* .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-}
-
-@media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
-
+/* -----Mobile menu----- */
 .menu-container {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 80px 35px 40px 40px;
-  background-color: #3f51b5;
+
+  background-color: var(--basic-white-bg-cl);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  
   z-index: 999;
 
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  
+  transition: transform var(--transit);
 }
-
 .menu-container.is-open {
   transform: translateX(0);
 }
 
-/* .menu-container .menu-toggle {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: #fff;
-} */
+.mobile-menu.mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
-.mobile-menu {
-  padding: 0;
+  margin-bottom: auto;
+}
+.mobile.nav-item {
   margin: 0;
-  list-style: none;
 }
 
-.mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
+.mobile.nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1111;
+}
+.current-mobile {
+  color: var(--pressed-txt-cl);
 }
 
+.contact.mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.mobile-tel.contact-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 
+  color: var(--primary-txt-cl);
+}
+.mobile-email.contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
 
-/* =============== Медиа запросы Header =============== */
+  letter-spacing: 0.02em;
+}
+
+.mobile.social-media-list {
+  gap: 0px;
+  max-width: 328px;
+  justify-content: space-between;
+
+  /* margin-right: 20px; */
+}
+/* ===== Медиа запросы Header ===== */
 
 /* 768 MAX-width -------------------------*/
 @media screen and (max-width: 767px) {
