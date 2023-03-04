@@ -376,8 +376,7 @@ img {
 
   /* margin-right: 20px; */
 }
-/* ===== Медиа запросы Header ===== */
-
+/* ---Медиа запросы Header--- */
 /* 768 MAX-width -------------------------*/
 @media screen and (max-width: 767px) {
   .section-header {
@@ -424,6 +423,9 @@ img {
     gap: 40px;
     align-items: center;
     flex-direction: row;
+  }
+  .logo-site {
+    line-height: 1.1333;
   }
 }
 
