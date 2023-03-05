@@ -166,7 +166,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ident);
+  /* gap: var(--ident); */
+  gap: 24px;
 }
 .social-media-item {
   width: 40px;
@@ -518,6 +519,7 @@ img {
 }
 
 /*########## ADVANTAGE ##########*/
+
 /** Репета с минусовыми маржинами
     .section-advantage {
     padding-top: 120px;
@@ -569,19 +571,27 @@ img {
   background-color: var(--cloud-light-bg-cl);
 }
 .advantage-list {
-  /* display: flex; */
-  /* gap: 22px; */
   --ident: 72px;
   --items: 1;
 }
 .advantage-title {
   margin-bottom: 8px;
-}
 
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+
+  text-transform: capitalize;
+
+  color: var(--navyblue-dark-txt-cl);
+}
+.advantage-description {
+  font-weight: 500;
+}
 /* ---Медиа запросы Advantage--- */
 /* 768 MAX-width -------------------------*/
 @media screen and (max-width: 767px) {
-  .advantage-title.title-third {
+  .advantage-title {
     text-align: center;
   }
 }
@@ -608,6 +618,14 @@ img {
   .advantage-list {
     --items: 4;
   }
+  .advantage-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .advantage-description {
+    font-weight: 400;
+  }
 }
 
 /*########## BENEFITS ##########*/
@@ -621,27 +639,33 @@ img {
 .benefits-list + .benefits-list {
   margin-left: 24px;
 }
+/* ---Медиа запросы Benefits--- */
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+  .section-benefits {
+    display: none;
+  }
+}
 
 /*########## TEAM ##########*/
 .team {
   background-color: var(--cloud-light-bg-cl);
 }
 .section-team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 128px;
 }
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  --items: 4;
-  gap: var(--ident);
+  --items: 1;
+  --ident: 72px;
 }
 .team-item {
   background-color: var(--basic-white-bg-cl);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  flex-basis: auto;
 }
 .team-item-content {
   padding: 32px 16px;
@@ -652,8 +676,7 @@ img {
 .team-position {
   margin-bottom: 8px;
 }
-
-/*-----team-icons-----*/
+/*---team-icons---*/
 .social-media-link.icon-blue {
   fill: var(--cloud-light-bg-cl);
   background-color: var(--primary-bg-cl);
@@ -662,11 +685,40 @@ img {
 .social-media-link:hover {
   background-color: var(--pressed-bg-cl);
 }
+/* ---Медиа запросы Team--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+  .section-team {
+    padding-bottom: 104px;
+  }
+  .team-list {
+    --items: 2;
+    --ident: 24px;
+    row-gap: 64px;
+  }
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .section-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .team-list {
+    --items: 4;
+    row-gap: 0px;
+  }
+}
 
 /*########## CUSTOMERS ##########*/
 .customers-section {
-  padding-top: 130px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .customers-list {
   display: flex;
@@ -696,7 +748,23 @@ img {
   border-color: var(--pressed-bg-cl);
   fill: var(--pressed-bg-cl);
 }
-
+/* ---Медиа запросы Team--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .customers-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 /*########## FOOTER ##########*/
 .section-footer {
   padding: 100px 0px;
