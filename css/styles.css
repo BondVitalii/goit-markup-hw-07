@@ -791,7 +791,6 @@ img {
   display: flex;
   align-items: baseline;
 }
-
 /*-----footer-logo-----*/
 .footer-box-logo {
   margin-right: 120px;
@@ -805,7 +804,6 @@ img {
   width: 264px;
   color: var(--accent-txt-cl);
 }
-
 /*-----social-media-----*/
 .footer-social-title,
 .footer-form-title {
@@ -814,7 +812,6 @@ img {
 
   color: var(--basic-white-txt-cl);
 }
-
 /*-----footer-icons-----*/
 .footer-social-media {
   margin-right: 80px;
@@ -822,7 +819,6 @@ img {
 .footer-social-media .social-media-list {
   gap: 16px;
 }
-
 .social-media-link.icon-grey {
   fill: var(--cloud-light-bg-cl);
   background-color: rgba(255, 255, 255, 0.1);
@@ -831,7 +827,6 @@ img {
 .social-media-link.icon-grey:hover {
   background-color: var(--green-bg-cl);
 }
-
 /*-----subscribe-form-----*/
 .subscribe-form {
   /* flex-grow: 1; */
@@ -869,6 +864,20 @@ img {
 .icon-subscribe {
   fill: var(--basic-white-bg-cl);
   margin-left: 16px;
+}
+/* ---Медиа запросы Footer--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+
 }
 
 /*########## PORTFOLIO ##########*/
