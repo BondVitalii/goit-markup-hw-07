@@ -86,7 +86,7 @@ body {
   margin-right: auto;
 
   /*для визуал. эфекта во время работы*/
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -166,7 +166,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: var(--ident); */
   gap: 24px;
 }
 .social-media-item {
@@ -324,7 +323,6 @@ img {
 .menu-container.is-open {
   transform: translateX(0);
 }
-
 .mobile-menu.mobile-list {
   display: flex;
   flex-direction: column;
@@ -335,7 +333,6 @@ img {
 .mobile.nav-item {
   margin: 0;
 }
-
 .mobile.nav-link {
   padding-top: 0;
   padding-bottom: 0;
@@ -347,7 +344,6 @@ img {
 .current-mobile {
   color: var(--pressed-txt-cl);
 }
-
 .contact.mobile-list {
   display: flex;
   flex-direction: column;
@@ -370,13 +366,10 @@ img {
 
   letter-spacing: 0.02em;
 }
-
 .mobile.social-media-list {
   gap: 0px;
   max-width: 328px;
   justify-content: space-between;
-
-  /* margin-right: 20px; */
 }
 /* ---Медиа запросы Header--- */
 /* 768 MAX-width -------------------------*/
@@ -429,6 +422,9 @@ img {
   .logo-site {
     line-height: 1.1333;
   }
+  .nav-link {
+    padding-bottom: 28px;
+  }
 }
 
 /*########## HERO ##########*/
@@ -440,16 +436,17 @@ img {
   padding-bottom: 112px;
   max-width: 428px;
   margin: 0 auto;
-  /* background-color: var(--one-bg-cl); */
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/people-office-1.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  background-color: var(--navyblue-dark-bg-cl);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/Dark-bg_mob@1x.jpg);
 }
 .hero-title {
   width: 320px;
@@ -476,7 +473,6 @@ img {
 
   color: var(--basic-white-txt-cl);
   background-color: var(--primary-bg-cl);
-  /* border: none; */
 
   transition: background-color var(--transit);
 }
@@ -485,13 +481,49 @@ img {
   background-color: var(--pressed-bg-cl);
 }
 /* ---Медиа запросы Hero--- */
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_mob@2x.jpg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/Dark-bg_tab@1x.jpg);
+  }
+  
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_tab@2x.jpg);
+    }
+  }
+}
+
 /* 768 MAX-width -------------------------*/
 @media screen and (max-width: 767px) {
 }
 /* 768 min-width -------------------------*/
 @media screen and (min-width: 768px) {
   .section-hero {
-    /* padding-top: 188px; */
     padding-bottom: 108px;
     max-width: 768px;
   }
@@ -502,7 +534,29 @@ img {
     width: 494px;
     margin-bottom: 40px;
   }
+
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_tab@2x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_tab@2x.jpg);
+    }
+  }
 }
+
 /* 1200 MAX-width -------------------------*/
 @media screen and (max-width: 1199px) {
 }
@@ -516,43 +570,30 @@ img {
   .hero-title {
     margin-bottom: 48px;
   }
+
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_desk@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg_desk@2x.jpg);
+    }
+  }
 }
 
 /*########## ADVANTAGE ##########*/
-
-/** Репета с минусовыми маржинами
-    .section-advantage {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .advantage-icon-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    margin-bottom: 8px;
-
-    border-radius: 4px;
-    background-color: var(--cloud-light-bg-cl);
-  }
-  .icon-advantage {
-    height: 112px;
-  }
-  .advantage-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -12px;
-  }
-  .advantage-item {
-    width: 264px;
-    margin: 12px;
-  }
-
-  .advantage-title {
-    margin-bottom: 8px;
-  } 
-*/
 
 .section-advantage {
   padding-top: 96px;
@@ -722,7 +763,6 @@ img {
 }
 .customers-list {
   justify-content: center;
-
 
   --items: 2;
   --ident: 16px;
@@ -947,15 +987,18 @@ img {
 
 /*########## PORTFOLIO ##########*/
 .section-portfolio {
-  padding: 96px 0 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 /*-----top-line-----*/
 .filter-portfolio {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: var(--ident);
-  margin-bottom: 72px;
+  row-gap: 16px;
+  margin-bottom: 48px;
 }
 .filter-btn {
   padding: 12px 24px;
@@ -981,6 +1024,11 @@ img {
 }
 
 /*-----card-----*/
+.portfolio-list {
+  flex-direction: column;
+  --items: 1;
+  --ident: 48px;
+}
 .portfolio-item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 
@@ -1029,7 +1077,61 @@ img {
   margin-bottom: 8px;
 }
 .portfolio-list.card-set {
-  row-gap: 48px;
+  /* row-gap: 48px; */
+}
+/* ---Медиа запросы Customers--- */
+/* 768 MAX-width -------------------------*/
+@media screen and (max-width: 767px) {
+}
+/* 768 min-width -------------------------*/
+@media screen and (min-width: 768px) {
+  .section-portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  .filter-portfolio {
+    flex-wrap: nowrap;
+    justify-content: center;
+    row-gap: 0px;
+    margin-bottom: 64px;
+  }
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    --items: 2;
+    --ident: 24px;
+    row-gap: 72px;
+  }
+  .portfolio-img {
+    width: 356px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+/* 1200 MAX-width -------------------------*/
+@media screen and (max-width: 1199px) {
+}
+/* 1200 min-width ------------------------*/
+@media screen and (min-width: 1200px) {
+  .section-portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+  .filter-portfolio {
+    margin-bottom: 72px;
+  }
+  .portfolio-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    --items: 3;
+    row-gap: 48px;
+  }
+  .portfolio-img {
+    width: 356px;
+    height: 300px;
+  }
 }
 
 /* ########## MODAL-WINDOW ##########*/
@@ -1187,7 +1289,6 @@ img {
 .modal-form-policy {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 
   margin-bottom: 24px;
 }
@@ -1240,95 +1341,3 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
-/** Пробные вар-ты модального окна
-|============================
-   .modal-policy-checkbox:focus-within > policy-icon-box {
-    border-color: var(--pressed-bg-cl);
-  }
-
-  .modal-policy-checkbox:focus + .policy-icon-box {
-    border-color: var(--pressed-bg-cl);
-  }
-
-  .modal-policy-checkbox:not(:focus) + .policy-icon-box {
-      border-color: var(--navyblue-dark-bg-cl);
-    }
-
-
-
-  .policy-icon-box:focus {
-    border-color: var(--pressed-bg-cl);
-  }
-
-  .modal-form-policy:focus + .policy-icon-box {
-    border-color: var(--pressed-bg-cl);
-  }
-
-  .policy-icon-box:focus-within > police-icon {
-    border: 1.25px solid var(--pressed-bg-cl);
-    border-color: var(--pressed-bg-cl);
-  }
-
-
-
-  вариант checkbox 1
-  --------------------------
-  .policy-icon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-
-  border: 1.25px solid var(--navyblue-dark-bg-cl);
-  border-radius: 2px;
-
-  transition: border-color var(--transit), border var(--transit), background var(--transit);
-  }
-
-
-  .modal-policy-checkbox:focus + .policy-icon-box {
-    border-color: var(--pressed-bg-cl);
-  }
-
-
-  .modal-policy-checkbox:checked + .policy-icon-box {
-    background: var(--pressed-bg-cl);
-    border: transparent;
-  }
-
-
-  .police-icon {
-    opacity: 0;
-    transition: opacity var(--transit), fill var(--transit);
-
-
-  }
-  .modal-policy-checkbox:focus + .policy-icon-box .police-icon {
-    opacity: 1;
-    fill: var(--cloud-light-txt-cl);
-  }
-
-
-
-  Ярослав checkbox
-  -----------------------------------
-  .modal-policy-checkbox {
-    appearance: none;
-    display: block;
-    width: 16px;
-    height: 16px;
-
-    border: 1.25px solid var(--navyblue-dark-bg-cl);
-    border-radius: 2px;
-  }
-  .modal-policy-checkbox:checked {
-    background-color: var(--pressed-bg-cl);
-    border-color: var(--pressed-bg-cl);
-
-    transition: var(--transit);
-  }
-|============================
-*/
